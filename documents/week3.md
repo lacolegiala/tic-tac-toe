@@ -1,0 +1,3 @@
+# Week 3
+
+This week I have implemented some basic stuff required in the game (a function that makes a move for the player and one that detects if there is a horizontal row). This is still very basic stuff and I haven't yet gotten into the minimax algorithm. I'll try to do that next week. This week I had some trouble concentrating so I didn't manage to get further. I spent around 10 hours with the project (including the time learning about minimax).
