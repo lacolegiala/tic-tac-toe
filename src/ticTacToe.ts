@@ -3,18 +3,16 @@ export const nextMove = (grid: string[], player: string, square: number) => {
 }
 
 export const findWinnerHorizontal = (grid: string[]) => {
-  let winner = 'tie'
-  for (let i = 0; i < grid.length; i++) {
-    if (i % 5 === 0) {
-      if (grid[i] !== '') {
-        for (let j = i + 1; j < i + 5; j++) {
-          if (grid[j] !== grid[i]) {
-            break;
-          }
+  let winner
+  while (!winner) {
+    for (let i = 0; i < grid.length; i++) {
+      if (i % 5 === 0 && grid[i] !== '') {
+        if ([grid[i], grid[i + 1], grid[i + 2], grid[i + 3], grid[i + 4]].every((value, i, arr) => value === arr[0])) {
+          return grid[i]
         }
-        winner = grid[i]
       }
     }
+    winner = 'tie'
   }
   return winner 
 }
